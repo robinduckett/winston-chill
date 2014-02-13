@@ -1,0 +1,14 @@
+{
+  "name": "winston-chill",
+  "version": "0.0.1",
+  "description": "A configuration manager for winston",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Duckett",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "~0.7.2"
+  }
+}
