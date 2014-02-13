@@ -21,6 +21,7 @@ function Chill(options) {
     this.port = options.port === undefined ? '8080' : options.port;
     this.path = options.path === undefined ? '/winston' : options.path;
     this.ssl = options.ssl === undefined ? false : options.ssl;
+    this.colorize = options.colorize === undefined ? true : options.colorize;
 
     this.env = {
         production: ['http'],
@@ -54,6 +55,10 @@ Chill.prototype._add = function(type, transport, options) {
 
     if (transport === 'file') {
         options.filename = options.filename === undefined ? '/tmp/winston.' + require('os').hostname() + '.log' : options.filename;
+    }
+
+    if (transport === 'console') {
+        options.colorize = options.colorize === undefined ? this.colorize : options.colorize;
     }
 
     options.level = options.level === undefined ? this.level : options.level;
