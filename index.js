@@ -90,13 +90,13 @@ Chill.prototype.environment = function(name) {
     return this;
 };
 
-Chill.prototype.add = function(transport, options) {
+Chill.prototype.handleExceptions = function(transport, options) {
     this._add('exceptionHandlers', transport, options);
 
     return this;
 };
 
-Chill.prototype.handleExceptions = function(transport, options) {
+Chill.prototype.add = function(transport, options) {
     this._add('transports', transport, options);
 
     return this;
