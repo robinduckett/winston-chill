@@ -1,6 +1,6 @@
 {
   "name": "winston-chill",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A configuration manager for winston",
   "main": "index.js",
   "scripts": {
